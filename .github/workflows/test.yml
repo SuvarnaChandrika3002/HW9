@@ -102,8 +102,8 @@ jobs:
         with:
           push: true
           tags: |
-            SuvarnaChandrika3002/HW9:latest
-            SuvarnaChandrika3002/HW9:${{ github.sha }}
+            SuvarnaChandrika3002/hw9:latest
+            SuvarnaChandrika3002/hw9:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=SuvarnaChandrika3002/HW9:cache
+          cache-from: type=registry,ref=SuvarnaChandrika3002/hw9:cache
           cache-to: type=inline,mode=max

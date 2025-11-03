@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Service: web
   web:
     build: .
     container_name: fastapi_calculator
@@ -19,7 +18,6 @@ services:
     networks:
       - app-network
 
-  # Service: db (PostgreSQL)
   db:
     image: postgres
     container_name: postgres_db
@@ -39,15 +37,14 @@ services:
     networks:
       - app-network
 
-  # Service: pgadmin
   pgadmin:
-    image: dpage/pgadmin4  # Updated to a newer version
+    image: dpage/pgadmin4  
     container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
-      - "5050:80"  # Ensure port 5050 is free or change if necessary
+      - "5050:80"  
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
